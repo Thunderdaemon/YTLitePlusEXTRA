@@ -324,6 +324,11 @@ jobs:
           cd YTVideoErrorAlert
           make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
           mv packages/*.deb ${{ github.workspace }}/ytvideoerror.deb
+     
+      - name: Get I Am Not YT tweak
+        run:  |
+           cd ${{github.workspace }}/ianyt.deb
+           wget https://files.catbox.moe/8p4195.deb
 
       # - name: Build VolumeBoostYT
       #   if: ${{ inputs.volboost }}
