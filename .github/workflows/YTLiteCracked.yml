@@ -232,11 +232,11 @@ jobs:
         #  make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
        #   mv packages/*.deb ${{ github.workspace }}/youquality.deb
 
-      - name: Build YouSpeed
-        run: |
-          cd YouSpeed
-          make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
-          mv packages/*.deb ${{ github.workspace }}/youspeed.deb
+     # - name: Build YouSpeed
+      #  run: |
+      #    cd YouSpeed
+       #   make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+      #    mv packages/*.deb ${{ github.workspace }}/youspeed.deb
 
       - name: Build DontEatMyContent
         if: ${{ inputs.demc }}
