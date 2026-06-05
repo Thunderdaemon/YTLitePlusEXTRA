@@ -154,14 +154,14 @@ jobs:
       - name: Clone YouMute
         run: git clone --quiet --depth=1 https://github.com/PoomSmart/YouMute.git
     
-      - name: Clone YouLoop
-        run: git clone --quiet --depth=1 https://github.com/bhackel/YouLoop.git
+     # - name: Clone YouLoop
+      #  run: git clone --quiet --depth=1 https://github.com/bhackel/YouLoop.git
 
-      - name: Clone Alderis
-        run: git clone --quiet --depth=1 https://github.com/hbang/Alderis.git
+     # - name: Clone Alderis
+      #  run: git clone --quiet --depth=1 https://github.com/hbang/Alderis.git
 
-      - name: Clone YouSlider
-        run: git clone --quiet --depth=1 https://github.com/PoomSmart/YouSlider.git
+     # - name: Clone YouSlider
+      #  run: git clone --quiet --depth=1 https://github.com/PoomSmart/YouSlider.git
 
       - name: Clone YouChooseQuality
         run: git clone --quiet https://github.com/PoomSmart/YouChooseQuality.git
@@ -169,8 +169,8 @@ jobs:
       - name: Clone YTSilentVote
         run: git clone --quiet --depth=1 https://github.com/PoomSmart/YTSilentVote.git
 
-      - name: Clone YouShare
-        run: git clone --quiet --depth=1 https://github.com/Tonwalter888/YouShare.git
+     # - name: Clone YouShare
+      #  run: git clone --quiet --depth=1 https://github.com/Tonwalter888/YouShare.git
 
       - name: Clone Gonerino
         run: git clone --quiet --depth=1 https://github.com/castdrian/Gonerino.git
@@ -178,8 +178,8 @@ jobs:
       - name: Clone YTweaks
         run: git clone --quiet --depth=1 https://github.com/fosterbarnes/YTweaks.git
 
-      - name: Clone YouGetCaption
-        run: git clone --quiet --depth=1 https://github.com/PoomSmart/YouGetCaption.git
+     # - name: Clone YouGetCaption
+     #   run: git clone --quiet --depth=1 https://github.com/PoomSmart/YouGetCaption.git
         
       - name: Clone YTFlags
         run: git clone --quiet --depth=1 https://github.com/Tonwalter888/YTFlags.git
@@ -187,19 +187,19 @@ jobs:
       - name: Clone IAmYouTube
         run: git clone --quiet --depth=1 https://github.com/PoomSmart/IAmYouTube.git
 
-      - name: Clone YTVideoErrorAlert
-        if: ${{ inputs.ytvid }}
-        run: git clone --quiet --depth=1 https://github.com/PoomSmart/YTVideoErrorAlert.git
+     # - name: Clone YTVideoErrorAlert
+      #  if: ${{ inputs.ytvid }}
+      #  run: git clone --quiet --depth=1 https://github.com/PoomSmart/YTVideoErrorAlert.git
 
       # - name: Clone VolumeBoostYT
       #   if: ${{ inputs.volboost }}
       #   run: git clone --quiet --depth=1 https://github.com/VasirakCalgux/VolumeBoostYT.git
         
-      - name: Build YouPiP
-        run: |
-          cd YouPiP
-          make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
-          mv packages/*.deb ${{ github.workspace }}/youpip.deb    
+     # - name: Build YouPiP
+     #   run: |
+      #    cd YouPiP
+       #   make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+      #    mv packages/*.deb ${{ github.workspace }}/youpip.deb    
 
       - name: Build YTUHD
         run: |
@@ -256,23 +256,23 @@ jobs:
           make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
           mv packages/*.deb ${{ github.workspace }}/ym.deb
 
-      - name: Build YouLoop
-        run: |
-          cd YouLoop
-          make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
-          mv packages/*.deb ${{ github.workspace }}/youloop.deb
+      #- name: Build YouLoop
+       # run: |
+       #   cd YouLoop
+        #  make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+       #   mv packages/*.deb ${{ github.workspace }}/youloop.deb
 
-      - name: Build YouSlider
-        run: |
-          cd YouSlider
-          make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
-          mv packages/*.deb ${{ github.workspace }}/youslider.deb
+     # - name: Build YouSlider
+      #  run: |
+      #    cd YouSlider
+       #   make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+       #   mv packages/*.deb ${{ github.workspace }}/youslider.deb
 
-      - name: Build Alderis
-        run: |
-          cd Alderis
-          make clean package DEBUG=0 FINALPACKAGE=1 ARCHS=arm64
-          mv packages/*.deb ${{ github.workspace }}/alderis.deb
+     # - name: Build Alderis
+      #  run: |
+       #   cd Alderis
+       #   make clean package DEBUG=0 FINALPACKAGE=1 ARCHS=arm64
+       #   mv packages/*.deb ${{ github.workspace }}/alderis.deb
 
       - name: Build YouChooseQuality
         run: |
@@ -287,11 +287,11 @@ jobs:
           make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
           mv packages/*.deb ${{ github.workspace }}/ytnovote.deb  
 
-      - name: Build YouShare
-        run: |
-          cd YouShare
-          make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
-          mv packages/*.deb ${{ github.workspace }}/youshare.deb
+     # - name: Build YouShare
+      #  run: |
+     #     cd YouShare
+      #    make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+       #   mv packages/*.deb ${{ github.workspace }}/youshare.deb
           
       - name: Build Gonerino
         run: |
@@ -299,11 +299,11 @@ jobs:
           make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
           mv packages/*.deb ${{ github.workspace }}/gonerino.deb
 
-      - name: Build YouGetCaption
-        run: |
-          cd YouGetCaption
-          make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
-          mv packages/*.deb ${{ github.workspace }}/ygc.deb
+     # - name: Build YouGetCaption
+     #   run: |
+     #     cd YouGetCaption
+     #     make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+      #    mv packages/*.deb ${{ github.workspace }}/ygc.deb
 
       - name: Build YTweaks
         run: |
