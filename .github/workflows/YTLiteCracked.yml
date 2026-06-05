@@ -245,11 +245,11 @@ jobs:
           make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
           mv packages/*.deb ${{ github.workspace }}/demc.deb
 
-      - name: Build YouMute
-        run: |
-          cd YouMute
-          make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
-          mv packages/*.deb ${{ github.workspace }}/ym.deb
+     # - name: Build YouMute
+      #  run: |
+        #  cd YouMute
+       #   make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+       #   mv packages/*.deb ${{ github.workspace }}/ym.deb
 
      # - name: Build YouLoop
       #  run: |
